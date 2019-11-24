@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<div class="container">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+
+<label class="col-md-2 control-label">
+
+{{form.Name.label}}
+</label>
+        <div class="col-md-6">
+{{form.Name}}
+                </div>
+    </div>
+    <div class="form-group">
+<label class="col-md-2 control-label">
+        {{form.Email.label}}
+</label>
+        <div class="col-md-6">
+{{form.Email}}
+        </div>
+    </div>
+    <div class="form-group">
+<label class="col-md-2 control-label">
+    {{form.Password.label}}
+</label>
+        <div class="col-md-6">
+    {{form.Password}}
+        </div>
+        <div class="form-group">
+<label class="col-md-2 control-label">    {{form.Mobile.label}}
+</label>
+                    <div class="col-md-6">
+
+    {{form.Mobile}}
+{{form.errors.Mobile}}
+        </div>
+        </div>
+         <div class="form-group">
+    <label class="col-md-2 control-label"> {{form.Address.label}}</label>
+
+             <div class="col-md-6">
+    {{form.Address}}
+        </div>
+         </div>
+
+
+    <input type="submit" value="submit" class="btn btn-primary">
+</form>
+</div>
+</body>
+</html>

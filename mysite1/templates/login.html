@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="col-md-6 wow animated fadeInRight right-contact-form" data-wow-delay=".2s">-->
+                <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator" >
+                    {% csrf_token %}
+                    <div class="form-group label-floating">
+                        <label class="control-label" for="name">Name</label>
+                        <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                        <!-- email -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="email">Password</label>
+                            <input class="form-control" id="email" type="password" name="Password" required data-error="Please enter your Email">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Subject -->
+
+                        <!-- Form Submit -->
+                        <div class="form-submit mt-5">
+                            <button>LOGIN</button>
+                            <!--                          <button class="btn btn-common" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>-->
+                            <!--                          <div id="msgSubmit" class="h3 text-center hidden"></div>-->
+                            <!--                          <div class="clearfix"></div>-->
+                        </div>
+
+                    </div></form>
+            </div>
+</body>
+</html>
